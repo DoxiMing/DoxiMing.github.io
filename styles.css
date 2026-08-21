@@ -12,12 +12,12 @@
 
 :root {
     --primary-color: #30004b;
-    --primary-light: #5a2d82;
-    --primary-lighter: #7a4db8;
-    --accent-color: #e8b4d4;
+    --primary-light: #4a0a65;
+    --primary-lighter: #5a1575;
+    --accent-color: #7a2d95;
     --text-dark: #1a1a1a;
     --text-light: #666;
-    --bg-light: #f9f7fc;
+    --bg-light: #f5f3f8;
     --white: #ffffff;
     --transition: all 0.3s ease;
 }
@@ -126,7 +126,7 @@ a {
    ========================================== */
 
 .hero {
-    background: linear-gradient(135deg, #f9f7fc 0%, #f0e8f8 100%);
+    background: linear-gradient(135deg, #faf8fc 0%, #f5f3f8 100%);
     padding: 8rem 0;
     text-align: center;
     border-bottom: 3px solid var(--primary-color);
@@ -233,7 +233,7 @@ a {
 }
 
 .highlight:hover {
-    background-color: #f0e8f8;
+    background-color: #f0eef5;
     transform: translateX(5px);
 }
 
@@ -269,7 +269,7 @@ a {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(48, 0, 75, 0.1);
     transition: var(--transition);
-    border: 1px solid #f0e8f8;
+    border: 1px solid #f0eef5;
 }
 
 .project-card:hover {
@@ -347,7 +347,7 @@ a {
 }
 
 .contact-item a {
-    color: var(--accent-color);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     transition: var(--transition);
     display: block;
