@@ -181,9 +181,9 @@ a {
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-light);
+    background-color: #30004b;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(48, 0, 75, 0.3);
+    box-shadow: 0 8px 25px rgba(48, 0, 75, 0.4);
 }
 
 .btn-secondary {
@@ -193,9 +193,10 @@ a {
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
+    background-color: #30004b;
     color: var(--white);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(48, 0, 75, 0.3);
 }
 
 /* ==========================================
@@ -249,61 +250,135 @@ a {
 }
 
 /* ==========================================
-   PROJECTS SECTION
+   MY JOURNEY - TIMELINE SECTION
    ========================================== */
 
-.projects {
+.journey {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-light));
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    top: 0;
+    z-index: 1;
+}
+
+.timeline-content {
+    width: calc(50% - 40px);
+    padding: 2rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    box-shadow: 0 6px 20px rgba(48, 0, 75, 0.15);
+    transform: translateY(-3px);
+}
+
+.timeline-content.left {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: right;
+}
+
+.timeline-content.right {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* ==========================================
+   INSIGHTS & THOUGHTS SECTION
+   ========================================== */
+
+.insights {
     padding: 6rem 0;
     background-color: var(--bg-light);
 }
 
-.projects-grid {
+.insights-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.project-card {
+.insight-card {
     background-color: var(--white);
+    padding: 2rem;
     border-radius: 12px;
-    overflow: hidden;
     box-shadow: 0 4px 15px rgba(48, 0, 75, 0.1);
     transition: var(--transition);
     border: 1px solid #f0eef5;
+    position: relative;
 }
 
-.project-card:hover {
+.insight-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(48, 0, 75, 0.15);
 }
 
-.project-image {
-    height: 200px;
-    background-color: var(--primary-color);
-}
-
-.project-card h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
+.insight-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
-.project-card p {
-    padding: 0 1.5rem;
-    font-size: 0.95rem;
+.insight-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.insight-card p {
+    font-size: 1rem;
     color: var(--text-light);
-}
-
-.project-link {
-    display: inline-block;
-    padding: 1rem 1.5rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.project-link:hover {
-    color: var(--primary-light);
-    transform: translateX(5px);
+    line-height: 1.7;
 }
 
 /* ==========================================
@@ -437,6 +512,26 @@ a {
     .contact-info {
         grid-template-columns: 1fr;
     }
+
+    /* Timeline responsive */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 70px);
+        margin-left: 70px !important;
+        text-align: left !important;
+    }
+
+    .timeline-content.left,
+    .timeline-content.right {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
@@ -459,5 +554,9 @@ a {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .insight-number {
+        font-size: 2rem;
     }
 }
