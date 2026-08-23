@@ -97,66 +97,38 @@
                 </div>
             </div>
 
-            <!-- Photo Gallery - Film Strip Style -->
-            <div class="film-strip-container">
-                <div class="film-strip">
-                    <div class="film-section">
-                        <h3>2020 - Starting Point</h3>
-                        <div class="film-photos">
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #30004b, #4a0a65);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #4a0a65, #5a1575);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #7a2d95);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #30004b, #5a1575);"></div>
-                            </div>
+            <!-- Film Strip Photo Gallery - Carousel -->
+            <div class="film-strip-wrapper">
+                <button class="film-arrow film-arrow-left" onclick="scrollFilmStrip(-1)">❮</button>
+                <div class="film-strip-container">
+                    <div class="film-strip" id="filmStrip">
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #30004b, #4a0a65);"></div>
                         </div>
-                        <p>A pivotal moment in my career. This is where I took the leap and decided to pursue [your field/passion].</p>
-                    </div>
-
-                    <div class="film-section">
-                        <h3>2021-2023 - Growth Journey</h3>
-                        <div class="film-photos">
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #7a2d95, #30004b);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #4a0a65);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #4a0a65, #30004b);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #7a2d95);"></div>
-                            </div>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #4a0a65, #5a1575);"></div>
                         </div>
-                        <p>I achieved my first major goals. Through hard work and dedication, I managed to expand my skills and impact.</p>
-                    </div>
-
-                    <div class="film-section">
-                        <h3>2024 - Building Authority</h3>
-                        <div class="film-photos">
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #30004b, #7a2d95);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #7a2d95, #5a1575);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #4a0a65);"></div>
-                            </div>
-                            <div class="film-photo">
-                                <div class="photo-placeholder" style="background: linear-gradient(135deg, #4a0a65, #30004b);"></div>
-                            </div>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #7a2d95);"></div>
                         </div>
-                        <p>Today, I'm focused on building my authority and sharing knowledge with others. This website is part of my mission.</p>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #30004b, #5a1575);"></div>
+                        </div>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #7a2d95, #30004b);"></div>
+                        </div>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #4a0a65);"></div>
+                        </div>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #4a0a65, #30004b);"></div>
+                        </div>
+                        <div class="film-photo">
+                            <div class="photo-placeholder" style="background: linear-gradient(135deg, #5a1575, #7a2d95);"></div>
+                        </div>
                     </div>
                 </div>
+                <button class="film-arrow film-arrow-right" onclick="scrollFilmStrip(1)">❯</button>
             </div>
         </div>
     </section>
@@ -230,5 +202,13 @@
             <p>&copy; 2024 Your Name. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function scrollFilmStrip(direction) {
+            const filmStrip = document.getElementById('filmStrip');
+            const scrollAmount = 300; // Adjust this value for scroll distance
+            filmStrip.scrollLeft += direction * scrollAmount;
+        }
+    </script>
 </body>
 </html>
