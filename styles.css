@@ -131,7 +131,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: url('fancy 1.jpeg') center/auto no-repeat;
+    background: url('fancy 1.jpeg') center/cover no-repeat;
     background-attachment: fixed;
 }
 
