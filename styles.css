@@ -315,81 +315,77 @@ a {
     font-weight: 500;
 }
 
-/* Film Strip Photo Gallery */
+/* Film Strip Photo Gallery - Carousel */
+.film-strip-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
 .film-strip-container {
-    background-color: var(--bg-light);
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
+    flex: 1;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+    border: 8px solid #333;
+    position: relative;
 }
 
 .film-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.film-section {
-    background-color: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #f0eef5;
-}
-
-.film-section h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.film-photos {
     display: flex;
     gap: 0.75rem;
-    margin-bottom: 1rem;
-    border: 3px solid #333;
-    border-radius: 4px;
     padding: 0.5rem;
-    background-color: #000;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+}
+
+.film-strip::-webkit-scrollbar {
+    display: none;
 }
 
 .film-photo {
-    flex: 1;
-    aspect-ratio: 1;
+    flex: 0 0 200px;
+    height: 200px;
     position: relative;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .film-photo::before {
     content: '';
     position: absolute;
-    top: -8px;
+    top: -12px;
     left: 0;
     right: 0;
-    height: 8px;
+    height: 12px;
     background-image: repeating-linear-gradient(
         90deg,
         #333 0px,
-        #333 8px,
-        transparent 8px,
-        transparent 16px
+        #333 10px,
+        transparent 10px,
+        transparent 20px
     );
-    background-size: 16px 8px;
+    background-size: 20px 12px;
 }
 
 .film-photo::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -12px;
     left: 0;
     right: 0;
-    height: 8px;
+    height: 12px;
     background-image: repeating-linear-gradient(
         90deg,
         #333 0px,
-        #333 8px,
-        transparent 8px,
-        transparent 16px
+        #333 10px,
+        transparent 10px,
+        transparent 20px
     );
-    background-size: 16px 8px;
+    background-size: 20px 12px;
 }
 
 .photo-placeholder {
@@ -398,10 +394,31 @@ a {
     border-radius: 2px;
 }
 
-.film-section p {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    line-height: 1.6;
+/* Film Strip Arrows */
+.film-arrow {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.film-arrow:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(48, 0, 75, 0.3);
+}
+
+.film-arrow:active {
+    transform: scale(0.95);
 }
 
 /* ==========================================
@@ -611,8 +628,15 @@ a {
         background-color: var(--bg-light);
     }
 
-    .film-photos {
-        gap: 0.5rem;
+    .film-photo {
+        flex: 0 0 150px;
+        height: 150px;
+    }
+
+    .film-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 }
 
@@ -642,11 +666,18 @@ a {
         flex: 0 1 100%;
     }
 
-    .film-photos {
-        gap: 0.25rem;
+    .film-photo {
+        flex: 0 0 120px;
+        height: 120px;
     }
 
-    .film-section {
-        padding: 1rem;
+    .film-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .film-strip-wrapper {
+        gap: 0.5rem;
     }
 }
