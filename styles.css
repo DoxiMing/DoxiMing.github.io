@@ -177,7 +177,7 @@ a {
 }
 
 .hero-title {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: var(--white);
     text-align: left;
     font-size: 3.5rem;
@@ -663,10 +663,10 @@ a {
    ========================================== */
 
 .footer {
-    background-color: #1a0030;
+    background-color: #30004b;
     color: var(--white);
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-size: 0.9rem;
 }
 
