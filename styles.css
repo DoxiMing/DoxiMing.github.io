@@ -122,31 +122,37 @@ a {
 }
 
 /* ==========================================
-   HERO SECTION - WITH PROFILE PHOTO
+   HERO SECTION - BACKGROUND IMAGE + OVERLAY
    ========================================== */
 
 .hero {
-    background: linear-gradient(135deg, #faf8fc 0%, #f5f3f8 100%);
-    padding: 6rem 0;
-    border-bottom: 3px solid var(--primary-color);
-    min-height: 500px;
+    position: relative;
+    min-height: 600px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    background: url('your-background-image.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(48, 0, 75, 0.8) 0%, rgba(48, 0, 75, 0.5) 50%, rgba(48, 0, 75, 0.2) 100%);
+    z-index: 1;
 }
 
 .hero .container {
-    width: 100%;
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
 }
 
 .hero-content {
     animation: fadeInUp 1s ease;
-}
-
-.hero-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
 }
 
 .hero-text {
@@ -158,20 +164,28 @@ a {
 
 .hero-title {
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--white);
     text-align: left;
     font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
     font-style: italic;
     text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    text-align: left;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
@@ -181,42 +195,22 @@ a {
     flex-wrap: wrap;
 }
 
-/* Profile Photo Container */
-.hero-photo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.profile-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 10px 40px rgba(48, 0, 75, 0.2);
-    border: 4px solid var(--primary-color);
-    transition: var(--transition);
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 50px rgba(48, 0, 75, 0.3);
-}
-
 /* ==========================================
-   RESPONSIVE - HERO WITH PHOTO
+   RESPONSIVE - HERO BACKGROUND
    ========================================== */
 
 @media (max-width: 768px) {
     .hero {
-        padding: 3rem 0;
-        min-height: auto;
+        min-height: 500px;
+        background-attachment: scroll;
     }
 
-    .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(48, 0, 75, 0.85) 0%, rgba(48, 0, 75, 0.6) 100%);
+    }
+
+    .hero .container {
+        max-width: 100%;
     }
 
     .hero-title {
@@ -224,40 +218,34 @@ a {
     }
 
     .hero-subtitle {
-        text-align: center;
+        font-size: 1.1rem;
     }
 
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-photo {
-        justify-content: center;
-    }
-
-    .profile-img {
-        width: 250px;
-        height: 250px;
+    .hero-description {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 2rem 0;
+        min-height: 400px;
     }
 
     .hero-title {
         font-size: 2rem;
     }
 
-    .profile-img {
-        width: 200px;
-        height: 200px;
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
     }
 
     .hero-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .btn {
@@ -265,6 +253,7 @@ a {
         max-width: 300px;
     }
 }
+
 
 /* ==========================================
    BUTTONS
