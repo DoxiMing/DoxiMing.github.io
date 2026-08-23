@@ -202,12 +202,14 @@ a {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/*
 .hero-buttons {
     display: flex;
     gap: 1rem;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+*/
 
 /* ==========================================
    RESPONSIVE - HERO BACKGROUND
@@ -540,6 +542,7 @@ a {
     transform: scale(0.95);
 }
 
+*/
 /* ==========================================
    INSIGHTS & THOUGHTS SECTION
    ========================================== */
@@ -597,6 +600,7 @@ a {
     color: var(--primary-light);
     transform: translateX(5px);
 }
+*/
 
 /* ==========================================
    CONTACT SECTION
