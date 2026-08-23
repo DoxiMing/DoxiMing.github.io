@@ -127,13 +127,24 @@ a {
 
 .hero {
     position: relative;
-    min-height: 600px;
+    min-height: 600px;  /* Mobile */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: url('fancy 1.jpeg') center/auto no-repeat;
+    background: url('fancy 1.jpeg') right center/auto no-repeat;
     background-size: auto 100%;
-    background-attachment: fixed;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        min-height: 800px;  /* Desktop - taller */
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        min-height: 900px;  /* Extra tall for large screens */
+    }
 }
 
 .hero-overlay {
