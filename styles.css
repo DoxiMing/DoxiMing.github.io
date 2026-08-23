@@ -346,11 +346,11 @@ a {
     transform: translateX(5px);
 }
 
-.highligh:hover h3 {
+.highlight:hover h3 {
    color: #ffffff;
 }
 
-.highligh:hover p {
+.highlight:hover p {
    color: #ffffff;
 }
 
