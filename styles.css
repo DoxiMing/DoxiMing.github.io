@@ -1187,6 +1187,335 @@ a {
 }
 
 /* ==========================================
+   SELF-EDUCATION SECTION
+   ========================================== */
+
+.dcbo-self-education {
+    --dcbo-learning-primary: #30004b;
+    --dcbo-learning-dark: #210034;
+    --dcbo-learning-text: #4b414f;
+    --dcbo-learning-muted: #817687;
+    --dcbo-learning-soft: #f7f2fa;
+    --dcbo-learning-border: #e5d9ea;
+
+    background-color: #ffffff;
+
+    padding: 7rem 2rem;
+}
+
+
+.dcbo-self-education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   SECTION LABEL
+   ========================================== */
+
+.dcbo-self-education-eyebrow {
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    margin-bottom: 2.5rem;
+
+    color: var(--dcbo-learning-primary);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+
+.dcbo-self-education-line {
+    width: 40px;
+    height: 2px;
+
+    flex-shrink: 0;
+
+    background-color: var(--dcbo-learning-primary);
+}
+
+
+/* ==========================================
+   MAIN TWO-COLUMN LAYOUT
+   ========================================== */
+
+.dcbo-self-education-grid {
+    display: grid;
+
+    grid-template-columns: 1.35fr 0.65fr;
+
+    gap: 6rem;
+
+    align-items: start;
+}
+
+
+/* ==========================================
+   LEFT SIDE
+   ========================================== */
+
+.dcbo-self-education-title {
+    max-width: 720px;
+
+    margin: 0 0 2.5rem;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    color: var(--dcbo-learning-dark);
+}
+
+
+.dcbo-self-education-title span {
+    display: block;
+
+    color: var(--dcbo-learning-primary);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+.dcbo-self-education-text {
+    max-width: 700px;
+}
+
+
+.dcbo-self-education-text p {
+    margin: 0 0 1.3rem;
+
+    color: var(--dcbo-learning-text);
+
+    font-size: 1.08rem;
+
+    line-height: 1.8;
+}
+
+
+.dcbo-self-education-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   RIGHT SIDE: INTEREST AREAS
+   ========================================== */
+
+.dcbo-self-education-interests {
+    margin-top: 1rem;
+
+    padding: 2.2rem;
+
+    background-color: var(--dcbo-learning-soft);
+
+    border-radius: 18px;
+}
+
+
+.dcbo-self-education-interests-title {
+    margin-bottom: 1.8rem;
+
+    color: var(--dcbo-learning-primary);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.dcbo-self-education-interest {
+    display: grid;
+
+    grid-template-columns: 12px 1fr;
+
+    gap: 1rem;
+
+    align-items: start;
+
+    padding: 1.35rem 0;
+
+    border-bottom: 1px solid var(--dcbo-learning-border);
+}
+
+
+.dcbo-self-education-interest:last-child {
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+
+.dcbo-self-education-interest:first-of-type {
+    padding-top: 0;
+}
+
+
+.dcbo-self-education-interest-dot {
+    width: 10px;
+    height: 10px;
+
+    margin-top: 0.45rem;
+
+    background-color: var(--dcbo-learning-primary);
+
+    border-radius: 50%;
+}
+
+
+.dcbo-self-education-interest h3 {
+    margin: 0 0 0.35rem;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.35rem;
+
+    color: var(--dcbo-learning-primary);
+}
+
+
+.dcbo-self-education-interest p {
+    margin: 0;
+
+    color: var(--dcbo-learning-muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   CLOSING STATEMENT
+   ========================================== */
+
+.dcbo-self-education-statement {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 1.5rem;
+
+    max-width: 900px;
+
+    margin-top: 5rem;
+}
+
+
+.dcbo-self-education-statement-line {
+    width: 3px;
+
+    min-height: 80px;
+
+    flex-shrink: 0;
+
+    background-color: var(--dcbo-learning-primary);
+}
+
+
+.dcbo-self-education-statement p {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    color: var(--dcbo-learning-dark);
+}
+
+
+.dcbo-self-education-statement span {
+    color: var(--dcbo-learning-primary);
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .dcbo-self-education {
+        padding: 5rem 1.5rem;
+    }
+
+
+    .dcbo-self-education-grid {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+
+    .dcbo-self-education-interests {
+        margin-top: 0;
+    }
+
+
+    .dcbo-self-education-statement {
+        margin-top: 3.5rem;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .dcbo-self-education {
+        padding: 4rem 1.25rem;
+    }
+
+
+    .dcbo-self-education-title {
+        font-size: 2.5rem;
+
+        margin-bottom: 2rem;
+    }
+
+
+    .dcbo-self-education-text p {
+        font-size: 1rem;
+    }
+
+
+    .dcbo-self-education-interests {
+        padding: 1.5rem;
+    }
+
+
+    .dcbo-self-education-statement {
+        gap: 1rem;
+
+        margin-top: 3rem;
+    }
+
+}
+
+/* ==========================================
    INSIGHTS & THOUGHTS SECTION
    ========================================== */
 /*
