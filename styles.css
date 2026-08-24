@@ -934,7 +934,7 @@ a {
     position: absolute;
 
     left: 1.2rem;
-    bottom: -0.25rem;
+    bottom: 0.5rem;
 
     z-index: 0;
 
@@ -960,7 +960,7 @@ a {
     position: absolute;
 
     right: 1.2rem;
-    top: 0.25rem;
+    top: -0.75rem;
 
     z-index: 0;
 
@@ -1253,7 +1253,7 @@ a {
     background-color: #30004b;
     color: #ffffff;
 
-    padding: 2.5rem 2rem 1.25rem;
+    padding: 2.2rem 2rem 2.5rem;
 }
 
 
@@ -1264,47 +1264,72 @@ a {
 
 
 /* ==========================================
-   MAIN ROW
+   TOP ROW
+   Navigation left / Social right
    ========================================== */
 
-.dcbo-footer-main {
+.dcbo-footer-top {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     gap: 2rem;
 
-    padding-bottom: 2rem;
-}
+    padding-bottom: 1.4rem;
 
-
-/* Quote */
-.dcbo-footer-quote {
-    max-width: 720px;
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.45rem;
-    font-weight: 600;
-
-    line-height: 1.4;
-
-    color: #ffffff;
-}
-
-
-.dcbo-footer-quote span {
-    font-size: 1rem;
-    font-weight: 400;
-
-    opacity: 0.8;
-
-    margin-left: 0.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 
 /* ==========================================
-   SOCIAL ICONS
+   LEFT NAVIGATION
+   ========================================== */
+
+.dcbo-footer-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+}
+
+
+.dcbo-footer-nav a,
+.dcbo-footer-nav-future {
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+.dcbo-footer-nav a {
+    transition: opacity 0.25s ease;
+}
+
+
+.dcbo-footer-nav a:hover,
+.dcbo-footer-nav a:focus {
+    opacity: 0.65;
+
+    outline: none;
+}
+
+
+.dcbo-footer-nav-divider {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+.dcbo-footer-nav-future {
+    opacity: 0.75;
+}
+
+
+/* ==========================================
+   RIGHT SOCIAL ICONS
    ========================================== */
 
 .dcbo-footer-social {
@@ -1355,7 +1380,7 @@ a {
 }
 
 
-/* LinkedIn letters */
+/* LinkedIn */
 .dcbo-footer-icon-text {
     font-family: Arial, sans-serif;
 
@@ -1374,41 +1399,91 @@ a {
 
 
 /* ==========================================
+   CENTER QUOTATION
+   ========================================== */
+
+.dcbo-footer-quote {
+    max-width: 850px;
+
+    margin: 2.5rem auto 0;
+
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #ffffff;
+}
+
+
+.dcbo-footer-quote p {
+    margin: 0;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    color: #ffffff;
+}
+
+
+/* Author underneath */
+.dcbo-footer-quote span {
+    display: block;
+
+    margin-top: 0.6rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ==========================================
    MOBILE
    ========================================== */
 
 @media (max-width: 700px) {
 
     .dcbo-footer {
-        padding: 2rem 1.25rem 1rem;
+        padding: 1.75rem 1.25rem 2rem;
     }
 
 
-    .dcbo-footer-main {
-        flex-direction: column;
+    .dcbo-footer-top {
+        gap: 1rem;
+    }
 
-        align-items: flex-start;
 
-        gap: 1.5rem;
+    .dcbo-footer-nav a,
+    .dcbo-footer-nav-future {
+        font-size: 0.88rem;
+    }
+
+
+    .dcbo-footer-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 1rem;
     }
 
 
     .dcbo-footer-quote {
-        font-size: 1.25rem;
+        margin-top: 2rem;
     }
 
 
-    .dcbo-footer-quote span {
-        display: block;
-
-        margin-left: 0;
-        margin-top: 0.4rem;
+    .dcbo-footer-quote p {
+        font-size: 1.3rem;
     }
 
 }
 
 /* ==========================================
-   FOOTER
+   FOOTER copyright
    ========================================== */
 
 .footer {
