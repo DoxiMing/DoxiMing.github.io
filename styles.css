@@ -373,6 +373,64 @@ a {
 }
 
 /* ==========================================
+   TIMELINE CAROUSEL ARROWS
+   ========================================== */
+
+.journey-timeline::scroll-button(left),
+.journey-timeline::scroll-button(right) {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    font-size: 2rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    position: absolute;
+
+    top: 2.1rem;
+
+    z-index: 100;
+
+    box-shadow: 0 4px 12px rgba(48, 0, 75, 0.25);
+}
+
+
+/* Left arrow */
+.journey-timeline::scroll-button(left) {
+    content: "‹" / "Vorherige Meilensteine";
+    left: 0.25rem;
+}
+
+
+/* Right arrow */
+.journey-timeline::scroll-button(right) {
+    content: "›" / "Nächste Meilensteine";
+    right: 0.25rem;
+}
+
+
+/* Hover */
+.journey-timeline::scroll-button(left):hover,
+.journey-timeline::scroll-button(right):hover {
+    background-color: var(--primary-light);
+}
+
+
+/* Automatically fade arrow if there is nowhere to scroll */
+.journey-timeline::scroll-button(left):disabled,
+.journey-timeline::scroll-button(right):disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* ==========================================
    MY JOURNEY SECTION
    ========================================== */
 
@@ -384,31 +442,69 @@ a {
 /* Horizontal Timeline */
 .journey-timeline {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+
     position: relative;
+
     gap: 1rem;
+
+    margin-bottom: 3rem;
+
+    /* Compact spacing - removes the huge empty area */
+    padding: 1rem 4rem 1.5rem;
+
+    /* Horizontal carousel */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    /* Makes scrolling stop nicely at milestones */
+    scroll-snap-type: x mandatory;
+
+    /* Hide normal scrollbar */
+    scrollbar-width: none;
 }
 
-.journey-timeline::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(to right, var(--primary-color), var(--primary-light));
-    z-index: 0;
+.journey-timeline::-webkit-scrollbar {
+    display: none;
 }
 
 .timeline-item-horizontal {
-    flex: 1;
+    /* Every milestone has a stable width */
+    flex: 0 0 210px;
+
     text-align: center;
     position: relative;
     z-index: 1;
+
     background: var(--white);
+
     padding: 1rem 0.5rem;
+
+    box-sizing: border-box;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* One connector line between each timeline milestone */
+.timeline-item-horizontal:not(:last-child)::after {
+    content: '';
+    position: absolute;
+
+    top: 2.1rem;
+    right: -1rem;
+
+    width: 1rem;
+    height: 2px;
+
+    background-color: var(--primary-color);
 }
 
 .timeline-year {
@@ -436,6 +532,81 @@ a {
     font-size: 0.95rem;
     color: var(--text-light);
     font-weight: 500;
+}
+
+/* ==========================================
+   TIMELINE DETAIL WINDOW
+   ========================================== */
+
+.dcbo-timeline-details {
+    position: static;
+
+    max-height: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    margin-top: 0;
+
+    padding: 0 1rem;
+
+    background-color: var(--white);
+
+    border-radius: 12px;
+
+    color: var(--text-light);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    text-align: left;
+
+    transform: scale(0.97);
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        margin-top 0.3s ease,
+        padding 0.3s ease,
+        transform 0.3s ease;
+
+    pointer-events: none;
+}
+
+
+/* Open detail window */
+.timeline-item-horizontal:hover .dcbo-timeline-details,
+.timeline-item-horizontal:focus .dcbo-timeline-details {
+    max-height: 350px;
+
+    opacity: 1;
+    visibility: visible;
+
+    margin-top: 1rem;
+
+    padding: 1rem;
+
+    transform: scale(1);
+
+    box-shadow: 0 10px 30px rgba(48, 0, 75, 0.18);
+
+    pointer-events: auto;
+}
+
+
+/* Slightly highlight selected milestone */
+.timeline-item-horizontal:hover,
+.timeline-item-horizontal:focus {
+    transform: scale(1.03);
+    z-index: 20;
+    outline: none;
+}
+
+
+/* Remove paragraph default margin */
+.dcbo-timeline-details p {
+    margin: 0;
 }
 
 /* Film Strip Photo Gallery - Carousel */
