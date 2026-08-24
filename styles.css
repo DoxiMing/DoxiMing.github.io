@@ -131,8 +131,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: url('fancy 1.jpeg') right center/auto no-repeat;
-    background-size: auto 100%;
+    background-image: url('fancy 1.jpeg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (min-width: 768px) {
