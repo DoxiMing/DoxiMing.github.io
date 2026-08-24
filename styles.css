@@ -377,7 +377,8 @@ a {
    ========================================== */
 
 .journey {
-    padding: 6rem 0;
+    padding-top: 0rem;
+    padding-bottom: 6rem;
     background-color: var(--white);
 }
 
@@ -745,6 +746,444 @@ a {
 
 .film-arrow:active {
     transform: scale(0.95);
+}
+
+/* ==========================================
+   MARKETING PHILOSOPHY
+   ========================================== */
+
+.dcbo-philosophy {
+    --dcbo-primary: #30004b;
+    --dcbo-primary-dark: #210034;
+    --dcbo-primary-soft: #f7f2fa;
+    --dcbo-primary-light: #8a5a9e;
+    --dcbo-text: #403745;
+    --dcbo-border: #e5d9ea;
+
+    background-color: var(--dcbo-primary-soft);
+
+    padding: 7rem 2rem;
+}
+
+
+.dcbo-philosophy-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   TOP AREA: TEXT + IMAGE
+   ========================================== */
+
+.dcbo-philosophy-top {
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 3rem;
+
+    align-items: center;
+
+    margin-bottom: 4.5rem;
+}
+
+
+.dcbo-philosophy-intro {
+    max-width: 760px;
+}
+
+
+.dcbo-philosophy-eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    margin-bottom: 1.5rem;
+
+    color: var(--dcbo-primary);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+
+.dcbo-philosophy-line {
+    width: 40px;
+    height: 2px;
+
+    flex-shrink: 0;
+
+    background-color: var(--dcbo-primary);
+}
+
+
+.dcbo-philosophy-title {
+    max-width: 950px;
+
+    margin: 0 0 2rem;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    color: var(--dcbo-primary-dark);
+}
+
+
+/* Highlighted part of headline */
+.dcbo-philosophy-title span {
+    color: var(--dcbo-primary);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+.dcbo-philosophy-lead {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: var(--dcbo-text);
+}
+
+
+/* ==========================================
+   PERSONAL IMAGE
+   ========================================== */
+
+.dcbo-philosophy-image-wrap {
+    position: relative;
+}
+
+
+.dcbo-philosophy-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 520px;
+
+    height: auto;
+
+    aspect-ratio: 520 / 640;
+
+    object-fit: cover;
+
+    margin-left: auto;
+
+    border-radius: 18px;
+
+    border: 4px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 16px 35px rgba(48, 0, 75, 0.12);
+}
+
+
+/* ==========================================
+   CONNECTED PHILOSOPHY SERIES
+   ========================================== */
+
+.dcbo-philosophy-series {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    margin-bottom: 4rem;
+
+    background-color: #ffffff;
+
+    border-top: 3px solid var(--dcbo-primary);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(48, 0, 75, 0.07);
+
+    overflow: hidden;
+}
+
+
+/* One opening German quotation mark
+   for the entire connected statement */
+.dcbo-philosophy-series::before {
+    content: '„';
+
+    position: absolute;
+
+    left: 1.2rem;
+    bottom: -0.25rem;
+
+    z-index: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 7rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: rgba(48, 0, 75, 0.10);
+
+    pointer-events: none;
+}
+
+
+/* One closing German quotation mark
+   for the entire connected statement */
+.dcbo-philosophy-series::after {
+    content: '“';
+
+    position: absolute;
+
+    right: 1.2rem;
+    top: 0.25rem;
+
+    z-index: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 7rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: rgba(48, 0, 75, 0.10);
+
+    pointer-events: none;
+}
+
+
+/* Individual parts of the connected statement */
+.dcbo-philosophy-series-item {
+    position: relative;
+
+    z-index: 1;
+
+    padding: 3.2rem 2rem 3rem;
+
+    background-color: transparent;
+}
+
+
+/* Divider between part 1 / 2 / 3 */
+.dcbo-philosophy-series-item:not(:last-child) {
+    border-right: 1px solid var(--dcbo-border);
+}
+
+
+.dcbo-philosophy-series-item h3 {
+    margin: 0 0 1.2rem;
+
+    color: var(--dcbo-primary);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.7rem;
+
+    line-height: 1.25;
+}
+
+
+.dcbo-philosophy-series-item p {
+    margin: 0;
+
+    color: var(--dcbo-text);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   CLOSING STATEMENT
+   ========================================== */
+
+.dcbo-philosophy-statement {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 1.5rem;
+
+    max-width: 850px;
+}
+
+
+.dcbo-philosophy-statement-line {
+    width: 3px;
+
+    min-height: 75px;
+
+    flex-shrink: 0;
+
+    background-color: var(--dcbo-primary);
+}
+
+
+.dcbo-philosophy-statement p {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    color: var(--dcbo-primary-dark);
+}
+
+
+/* Highlight second sentence */
+.dcbo-philosophy-statement span {
+    color: var(--dcbo-primary);
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .dcbo-philosophy {
+        padding: 5rem 1.5rem;
+    }
+
+
+    .dcbo-philosophy-top {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+        margin-bottom: 3.5rem;
+    }
+
+
+    .dcbo-philosophy-image {
+        max-width: 600px;
+
+        margin-left: 0;
+    }
+
+
+    .dcbo-philosophy-series {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dcbo-philosophy-series-item:not(:last-child) {
+        border-right: none;
+
+        border-bottom: 1px solid var(--dcbo-border);
+    }
+
+
+    .dcbo-philosophy-series-item {
+        padding: 2.5rem 2rem;
+    }
+
+
+    .dcbo-philosophy-series::before {
+        font-size: 5.5rem;
+    }
+
+
+    .dcbo-philosophy-series::after {
+        font-size: 5.5rem;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .dcbo-philosophy {
+        padding: 4rem 1.25rem;
+    }
+
+
+    .dcbo-philosophy-title {
+        font-size: 2.5rem;
+    }
+
+
+    .dcbo-philosophy-lead {
+        font-size: 1rem;
+    }
+
+
+    .dcbo-philosophy-series {
+        margin-bottom: 3rem;
+    }
+
+
+    .dcbo-philosophy-series-item {
+        padding: 2.25rem 1.5rem;
+    }
+
+
+    .dcbo-philosophy-series-item h3 {
+        font-size: 1.45rem;
+    }
+
+
+    .dcbo-philosophy-series-item p {
+        font-size: 0.98rem;
+
+        line-height: 1.75;
+    }
+
+
+    .dcbo-philosophy-series::before {
+        left: 0.7rem;
+
+        font-size: 4.5rem;
+    }
+
+
+    .dcbo-philosophy-series::after {
+        right: 0.7rem;
+
+        font-size: 4.5rem;
+    }
+
+
+    .dcbo-philosophy-statement {
+        gap: 1rem;
+    }
+
 }
 
 /* ==========================================
