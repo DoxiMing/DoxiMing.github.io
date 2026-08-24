@@ -1246,63 +1246,165 @@ a {
 */
 
 /* ==========================================
-   CONTACT SECTION
+   COMPACT FOOTER
    ========================================== */
 
-.contact {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-    color: var(--white);
-    text-align: center;
+.dcbo-footer {
+    background-color: #30004b;
+    color: #ffffff;
+
+    padding: 2.5rem 2rem 1.25rem;
 }
 
-.contact h3 {
-    color: var(--white);
-}
 
-.contact-subtitle {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 600px;
+.dcbo-footer-container {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
 
-.contact-item h3 {
-    color: var(--white);
-    margin-bottom: 1rem;
-}
+/* ==========================================
+   MAIN ROW
+   ========================================== */
 
-.contact-item a {
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
-    transition: var(--transition);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.contact-item a:hover {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-.social-links {
+.dcbo-footer-main {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-bottom: 2rem;
+}
+
+
+/* Quote */
+.dcbo-footer-quote {
+    max-width: 720px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.45rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    color: #ffffff;
+}
+
+
+.dcbo-footer-quote span {
+    font-size: 1rem;
+    font-weight: 400;
+
+    opacity: 0.8;
+
+    margin-left: 0.4rem;
+}
+
+
+/* ==========================================
+   SOCIAL ICONS
+   ========================================== */
+
+.dcbo-footer-social {
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    flex-shrink: 0;
+}
+
+
+.dcbo-footer-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.dcbo-footer-icon:hover,
+.dcbo-footer-icon:focus {
+    background-color: #ffffff;
+
+    color: #30004b;
+
+    transform: translateY(-3px);
+
+    outline: none;
+}
+
+
+/* LinkedIn letters */
+.dcbo-footer-icon-text {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.95rem;
+
+    text-transform: lowercase;
+}
+
+
+/* XING */
+.dcbo-footer-icon-xing {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .dcbo-footer {
+        padding: 2rem 1.25rem 1rem;
+    }
+
+
+    .dcbo-footer-main {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.5rem;
+    }
+
+
+    .dcbo-footer-quote {
+        font-size: 1.25rem;
+    }
+
+
+    .dcbo-footer-quote span {
+        display: block;
+
+        margin-left: 0;
+        margin-top: 0.4rem;
+    }
+
 }
 
 /* ==========================================
