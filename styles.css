@@ -97,10 +97,19 @@ a {
 }
 
 .nav-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+
+/* Navigation logo */
+.dcbo-nav-logo {
+    display: block;
+
+    width: 50px;
+    max-width: 100%;
+
+    height: auto;
 }
 
 .nav-menu {
@@ -974,11 +983,16 @@ a {
         --dcbo-year-gap: 22px;
         --dcbo-year-total-width: 1182px;
 
-        min-height: 430px;
+        min-height: 125px;
 
         padding: 0 52px;
     }
-
+   
+/* Give the popup room only when a year is active */
+.dcbo-year-carousel:has(.dcbo-year-item:hover),
+.dcbo-year-carousel:has(.dcbo-year-item:focus) {
+    min-height: 360px;
+}
 
     .dcbo-year-pill {
         min-height: 78px;
@@ -1588,7 +1602,7 @@ a {
    ========================================== */
 
 @media (max-width: 600px) {
-
+   
     .dcbo-philosophy {
         padding: 4rem 1.25rem;
     }
