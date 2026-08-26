@@ -377,269 +377,721 @@ a {
    ========================================== */
 
 .journey {
-    padding-top: 0rem;
-    padding-bottom: 6rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+
     background-color: var(--white);
 }
 
 
 /* ==========================================
-   TIMELINE CAROUSEL WRAPPER
+   YEAR CAROUSEL
    ========================================== */
 
-.dcbo-timeline-carousel {
+.dcbo-year-carousel {
+    --dcbo-year-purple: #30004b;
+    --dcbo-year-soft: #f7f2fa;
+    --dcbo-year-item-width: 190px;
+    --dcbo-year-gap: 28px;
+    --dcbo-year-total-width: 1498px;
+
+    position: relative;
+
     width: 100%;
 
-    display: flex;
-    align-items: flex-start;
+    min-height: 150px;
 
-    gap: 1rem;
+    margin-top: 2rem;
 
-    margin-bottom: 3rem;
+    padding: 0 68px;
+
+    box-sizing: border-box;
 }
 
 
 /* ==========================================
-   HORIZONTAL TIMELINE
+   HIDDEN RADIO STATES
    ========================================== */
 
-.journey-timeline {
-    flex: 1 1 auto;
+.dcbo-year-state {
+    position: absolute;
 
-    /* Very important inside the flex wrapper */
-    min-width: 0;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    position: relative;
-
-    gap: 1rem;
-
-    padding: 1rem 0 1.5rem;
-    margin: 0;
-
-    overflow-x: auto;
-
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-    /* Hide scrollbar */
-    scrollbar-width: none;
-}
-
-.journey-timeline::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Start and end targets for arrows */
-.dcbo-timeline-marker {
-    flex: 0 0 1px;
     width: 1px;
     height: 1px;
 
-    scroll-snap-align: start;
-}
-
-
-/* ==========================================
-   TIMELINE ARROWS
-   Uses existing film-arrow design
-   ========================================== */
-
-.dcbo-timeline-arrow {
-    flex: 0 0 50px;
-
-    margin-top: 1rem;
-
-    text-decoration: none;
-
-    position: relative;
-
-    z-index: 50;
-}
-
-
-/* ==========================================
-   TIMELINE ITEMS
-   ========================================== */
-
-.timeline-item-horizontal {
-    /* Stable width even when you add more milestones */
-    flex: 0 0 210px;
-
-    text-align: center;
-
-    position: relative;
-
-    z-index: 1;
-
-    background: var(--white);
-
-    padding: 1rem 0.5rem;
-
-    box-sizing: border-box;
-
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-/* One connector between each milestone */
-.timeline-item-horizontal:not(:last-of-type)::after {
-    content: '';
-
-    position: absolute;
-
-    top: 2.1rem;
-    right: -1rem;
-
-    width: 1rem;
-    height: 2px;
-
-    background-color: var(--primary-color);
-}
-
-
-/* ==========================================
-   YEAR
-   ========================================== */
-
-.timeline-year {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    color: var(--primary-color);
-
-    margin-bottom: 0.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 0.5rem;
-}
-
-.timeline-year::before {
-    content: '';
-
-    width: 16px;
-    height: 16px;
-
-    flex-shrink: 0;
-
-    background-color: var(--primary-color);
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 0 4px var(--white),
-        0 0 0 6px var(--primary-color);
-}
-
-
-/* ==========================================
-   SHORT LABEL
-   ========================================== */
-
-.timeline-label {
-    font-size: 0.95rem;
-
-    color: var(--text-light);
-
-    font-weight: 500;
-
-    line-height: 1.5;
-}
-
-
-/* ==========================================
-   TIMELINE DETAIL WINDOW
-   ========================================== */
-
-.dcbo-timeline-details {
-    position: static;
-
-    max-height: 0;
-
     opacity: 0;
-    visibility: hidden;
-
-    overflow: hidden;
-
-    margin-top: 0;
-
-    padding: 0 1rem;
-
-    background-color: var(--white);
-
-    border-radius: 12px;
-
-    color: var(--text-light);
-
-    font-size: 0.95rem;
-    line-height: 1.6;
-
-    text-align: left;
-
-    transform: scale(0.97);
-
-    transition:
-        max-height 0.4s ease,
-        opacity 0.3s ease,
-        margin-top 0.3s ease,
-        padding 0.3s ease,
-        transform 0.3s ease;
 
     pointer-events: none;
 }
 
 
-/* Open detail window */
-.timeline-item-horizontal:hover .dcbo-timeline-details,
-.timeline-item-horizontal:focus .dcbo-timeline-details {
-    max-height: 350px;
+/* ==========================================
+   VISIBLE YEAR AREA
+   ========================================== */
 
-    opacity: 1;
-    visibility: visible;
+.dcbo-year-viewport {
+    position: relative;
 
-    margin-top: 1rem;
+    width: 100%;
 
-    padding: 1rem;
+    overflow: hidden;
 
-    transform: scale(1);
-
-    box-shadow:
-        0 10px 30px rgba(48, 0, 75, 0.18);
-
-    pointer-events: auto;
+    box-sizing: border-box;
 }
 
 
-/* Highlight selected milestone */
-.timeline-item-horizontal:hover,
-.timeline-item-horizontal:focus {
-    transform: scale(1.03);
+/* ==========================================
+   MOVING YEAR TRACK
+   ========================================== */
 
-    z-index: 20;
+.dcbo-year-track {
+    position: relative;
+
+    left: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--dcbo-year-gap);
+
+    width: max-content;
+
+    margin: 0;
+
+    padding: 0.5rem 0 1rem;
+
+    transition: left 0.45s ease;
+}
+
+
+/* ==========================================
+   CAROUSEL POSITIONS
+   ========================================== */
+
+#dcbo-year-pos-1:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: 0;
+}
+
+
+#dcbo-year-pos-2:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: max(
+        calc(100% - var(--dcbo-year-total-width)),
+        -218px
+    );
+}
+
+
+#dcbo-year-pos-3:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: max(
+        calc(100% - var(--dcbo-year-total-width)),
+        -436px
+    );
+}
+
+
+#dcbo-year-pos-4:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: max(
+        calc(100% - var(--dcbo-year-total-width)),
+        -654px
+    );
+}
+
+
+#dcbo-year-pos-5:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: max(
+        calc(100% - var(--dcbo-year-total-width)),
+        -872px
+    );
+}
+
+
+#dcbo-year-pos-6:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: max(
+        calc(100% - var(--dcbo-year-total-width)),
+        -1090px
+    );
+}
+
+
+#dcbo-year-pos-7:checked ~
+.dcbo-year-viewport .dcbo-year-track {
+    left: calc(
+        100% - var(--dcbo-year-total-width)
+    );
+}
+
+
+/* ==========================================
+   INDIVIDUAL YEAR
+   ========================================== */
+
+.dcbo-year-item {
+    position: relative;
+
+    flex: 0 0 var(--dcbo-year-item-width);
+
+    width: var(--dcbo-year-item-width);
+
+    text-align: center;
 
     outline: none;
 }
 
 
-/* Remove default paragraph margin */
-.dcbo-timeline-details p {
+/* ==========================================
+   DASH BETWEEN YEARS
+   ========================================== */
+
+.dcbo-year-item:not(:last-child)::after {
+    content: '–';
+
+    position: absolute;
+
+    top: 50%;
+
+    right: -21px;
+
+    transform: translateY(-50%);
+
+    color: var(--dcbo-year-purple);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   YEAR BOX
+   ========================================== */
+
+.dcbo-year-pill {
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+    box-sizing: border-box;
+
+    background-color: var(--dcbo-year-soft);
+
+    border: 2px solid transparent;
+
+    border-radius: 16px;
+
+    color: var(--dcbo-year-purple);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ==========================================
+   STRONG PURPLE HOVER
+   ========================================== */
+
+.dcbo-year-item:hover .dcbo-year-pill,
+.dcbo-year-item:focus .dcbo-year-pill {
+    background-color: #30004b;
+
+    border-color: #30004b;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 24px rgba(48, 0, 75, 0.18);
+}
+
+
+/* ==========================================
+   CENTRAL DETAIL POPUP
+   ========================================== */
+
+.dcbo-year-popup {
+    position: absolute;
+
+    top: 145px;
+    left: 50%;
+
+    width: min(560px, calc(100% - 150px));
+
+    box-sizing: border-box;
+
+    padding: 1.5rem 1.7rem;
+
+    background-color: #ffffff;
+
+    border:
+        1px solid rgba(48, 0, 75, 0.10);
+
+    border-top:
+        3px solid var(--dcbo-year-purple);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 18px 38px rgba(48, 0, 75, 0.15);
+
+    text-align: left;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+    pointer-events: none;
+
+    z-index: 80;
+}
+
+
+/* ==========================================
+   POPUP YEAR
+   ========================================== */
+
+.dcbo-year-popup-year {
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    font-size: 1.2rem;
+}
+
+.dcbo-year-popup h3 {
+    display: inline-block;
+    white-space: nowrap;
+
+    font-size: 1.2rem;
+}
+
+
+/* ==========================================
+   POPUP TITLE
+   ========================================== */
+
+.dcbo-year-popup h3 {
     margin: 0;
+
+    color: var(--dcbo-year-purple);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   POPUP DIVIDER
+   ========================================== */
+
+.dcbo-year-popup-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 1rem 0;
+
+    background-color:
+        rgba(48, 0, 75, 0.12);
+}
+
+
+/* ==========================================
+   POPUP TEXT
+   ========================================== */
+
+.dcbo-year-popup p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   SHOW CORRECT POPUP
+   ========================================== */
+
+/* 2018 */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2018:hover
+)
+.dcbo-year-popup-2018,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2018:focus
+)
+.dcbo-year-popup-2018 {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* 2022 */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2022:hover
+)
+.dcbo-year-popup-2022,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2022:focus
+)
+.dcbo-year-popup-2022 {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* 2023 */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2023:hover
+)
+.dcbo-year-popup-2023,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2023:focus
+)
+.dcbo-year-popup-2023 {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* 2024 */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2024:hover
+)
+.dcbo-year-popup-2024,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2024:focus
+)
+.dcbo-year-popup-2024 {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* 2025 */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2025:hover
+)
+.dcbo-year-popup-2025,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2025:focus
+)
+.dcbo-year-popup-2025 {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* 2026 */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2026:hover
+)
+.dcbo-year-popup-2026,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-2026:focus
+)
+.dcbo-year-popup-2026 {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* Future */
+.dcbo-year-carousel:has(
+    .dcbo-year-item-future:hover
+)
+.dcbo-year-popup-future,
+
+.dcbo-year-carousel:has(
+    .dcbo-year-item-future:focus
+)
+.dcbo-year-popup-future {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* ==========================================
+   ARROW CONTROLS
+   ========================================== */
+
+.dcbo-year-controls {
+    position: absolute;
+
+    top: 1.25rem;
+
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: space-between;
+
+    pointer-events: none;
+
+    z-index: 100;
+}
+
+
+.dcbo-year-controls .dcbo-year-arrow {
+    pointer-events: auto;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+/* Disabled arrow */
+.dcbo-year-arrow-disabled {
+    opacity: 0.3;
+
+    cursor: default !important;
+
+    pointer-events: none !important;
+}
+
+
+/* ==========================================
+   SHOW CORRECT ARROW PAIR
+   ========================================== */
+
+#dcbo-year-pos-1:checked ~
+.dcbo-year-controls-1,
+
+#dcbo-year-pos-2:checked ~
+.dcbo-year-controls-2,
+
+#dcbo-year-pos-3:checked ~
+.dcbo-year-controls-3,
+
+#dcbo-year-pos-4:checked ~
+.dcbo-year-controls-4,
+
+#dcbo-year-pos-5:checked ~
+.dcbo-year-controls-5,
+
+#dcbo-year-pos-6:checked ~
+.dcbo-year-controls-6,
+
+#dcbo-year-pos-7:checked ~
+.dcbo-year-controls-7 {
+    display: flex;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .dcbo-year-carousel {
+        --dcbo-year-item-width: 150px;
+        --dcbo-year-gap: 22px;
+        --dcbo-year-total-width: 1182px;
+
+        min-height: 430px;
+
+        padding: 0 52px;
+    }
+
+
+    .dcbo-year-pill {
+        min-height: 78px;
+
+        font-size: 1.5rem;
+    }
+
+
+    .dcbo-year-item:not(:last-child)::after {
+        right: -17px;
+
+        font-size: 1.2rem;
+    }
+
+
+    .dcbo-year-popup {
+        top: 125px;
+
+        width: calc(100% - 24px);
+
+        padding: 1.25rem;
+    }
+
+
+    .dcbo-year-popup-year {
+        font-size: 1.25rem;
+    }
+
+
+    .dcbo-year-popup h3 {
+        font-size: 1.05rem;
+    }
+
+
+    .dcbo-year-popup p {
+        font-size: 0.92rem;
+
+        line-height: 1.65;
+    }
+
+
+    .dcbo-year-controls {
+        top: 0.9rem;
+    }
+
+
+    #dcbo-year-pos-2:checked ~
+    .dcbo-year-viewport .dcbo-year-track {
+        left: max(
+            calc(100% - var(--dcbo-year-total-width)),
+            -172px
+        );
+    }
+
+
+    #dcbo-year-pos-3:checked ~
+    .dcbo-year-viewport .dcbo-year-track {
+        left: max(
+            calc(100% - var(--dcbo-year-total-width)),
+            -344px
+        );
+    }
+
+
+    #dcbo-year-pos-4:checked ~
+    .dcbo-year-viewport .dcbo-year-track {
+        left: max(
+            calc(100% - var(--dcbo-year-total-width)),
+            -516px
+        );
+    }
+
+
+    #dcbo-year-pos-5:checked ~
+    .dcbo-year-viewport .dcbo-year-track {
+        left: max(
+            calc(100% - var(--dcbo-year-total-width)),
+            -688px
+        );
+    }
+
+
+    #dcbo-year-pos-6:checked ~
+    .dcbo-year-viewport .dcbo-year-track {
+        left: max(
+            calc(100% - var(--dcbo-year-total-width)),
+            -860px
+        );
+    }
+
+
+    #dcbo-year-pos-7:checked ~
+    .dcbo-year-viewport .dcbo-year-track {
+        left: calc(
+            100% - var(--dcbo-year-total-width)
+        );
+    }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dcbo-year-track,
+    .dcbo-year-pill,
+    .dcbo-year-popup {
+        transition: none;
+    }
+
 }
 
 /* Film Strip Photo Gallery - Carousel */
