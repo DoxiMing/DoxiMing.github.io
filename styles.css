@@ -1121,91 +1121,230 @@ a {
 
 }
 
-/* Film Strip Photo Gallery - Carousel */
+/* ==========================================
+   AUTOMATIC FILM STRIP
+   ========================================== */
+
 .film-strip-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    width: 100%;
     margin-top: 3rem;
 }
 
+
+/* ==========================================
+   FILM FRAME
+   Black base + brand-purple film
+   ========================================== */
+
 .film-strip-container {
-    flex: 1;
+    width: 100%;
+
     overflow: hidden;
-    background-color: #000;
+
+    /* Black shows through the perforation gaps */
+    background-color: #000000;
+
+    /* Replace old gray frame with brand purple */
+    border: 8px solid #30004b;
+
     border-radius: 8px;
-    border: 8px solid #333;
+
+    padding: 12px 8px;
+
+    box-sizing: border-box;
+
     position: relative;
 }
+
+
+/* ==========================================
+   MOVING FILM TRACK
+   ========================================== */
 
 .film-strip {
     display: flex;
-    gap: 0.75rem;
-    padding: 0.5rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    /* Hide scrollbar */
-    scrollbar-width: none;
+
+    width: max-content;
+
+    overflow: visible;
+
+    animation: dcbo-film-scroll 45s linear infinite;
+
+    will-change: transform;
 }
 
-.film-strip::-webkit-scrollbar {
-    display: none;
+
+/* ==========================================
+   PHOTO GROUP
+   ========================================== */
+
+.dcbo-film-group {
+    display: flex;
+
+    flex-shrink: 0;
+
+    gap: 0.75rem;
+
+    padding-right: 0.75rem;
 }
+
+
+/* ==========================================
+   INDIVIDUAL PHOTO
+   ========================================== */
 
 .film-photo {
-    flex: 0 0 200px;
-    height: 200px;
     position: relative;
-    background-color: #fff;
+
+    flex: 0 0 200px;
+
+    width: 200px;
+    height: 200px;
+
+    background-color: #ffffff;
+
     border-radius: 4px;
 }
 
+
 .film-photo-img {
+    display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     border-radius: 2px;
-    display: block;
 }
+
+
+/* ==========================================
+   TOP FILM PERFORATIONS
+   Purple film + black gaps
+   ========================================== */
 
 .film-photo::before {
     content: '';
+
     position: absolute;
+
     top: -12px;
     left: 0;
     right: 0;
+
     height: 12px;
-    background-image: repeating-linear-gradient(
-        90deg,
-        #333 0px,
-        #333 10px,
-        transparent 10px,
-        transparent 20px
-    );
+
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            #30004b 0,
+            #30004b 10px,
+            transparent 10px,
+            transparent 20px
+        );
+
     background-size: 20px 12px;
 }
+
+
+/* ==========================================
+   BOTTOM FILM PERFORATIONS
+   ========================================== */
 
 .film-photo::after {
     content: '';
+
     position: absolute;
+
     bottom: -12px;
     left: 0;
     right: 0;
+
     height: 12px;
-    background-image: repeating-linear-gradient(
-        90deg,
-        #333 0px,
-        #333 10px,
-        transparent 10px,
-        transparent 20px
-    );
+
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            #30004b 0,
+            #30004b 10px,
+            transparent 10px,
+            transparent 20px
+        );
+
     background-size: 20px 12px;
 }
 
-.photo-placeholder {
-    width: 100%;
-    height: 100%;
-    border-radius: 2px;
+
+/* ==========================================
+   AUTOMATIC MOVEMENT
+   ========================================== */
+
+@keyframes dcbo-film-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ==========================================
+   PAUSE WHEN HOVERING
+   ========================================== */
+
+.film-strip-container:hover .dcbo-film-loop {
+    animation-play-state: paused;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .film-strip-wrapper {
+        margin-top: 2rem;
+    }
+
+
+    .film-strip-container {
+        border-width: 6px;
+
+        padding: 12px 6px;
+    }
+
+
+    .film-photo {
+        flex: 0 0 160px;
+
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .film-strip {
+        animation-duration: 50s;
+    }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .film-strip {
+        animation: none;
+    }
+
 }
 
 /* Film Strip Arrows */
