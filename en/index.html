@@ -12,22 +12,111 @@
 <div id="Home"></div>
 
 <nav class="navbar">
+
     <div class="container">
 
+
+        <!-- LEFT: Logo -->
         <div class="nav-brand">
+
             <img
                 class="dcbo-nav-logo"
-                src="my avatar.png"
+                src="../my avatar.png"
                 alt="Xing Qin">
+
         </div>
 
-        <ul class="nav-menu">
-            <li><a href="#Kontakt">Contact</a></li>
-        </ul>
+
+        <!-- RIGHT: Language + Contact -->
+        <div class="dcbo-nav-actions">
+
+
+            <!-- Language dropdown -->
+            <details class="dcbo-language-menu">
+
+                <summary
+                    class="dcbo-language-button"
+                    aria-label="Select language">
+
+                    <svg
+                        class="dcbo-language-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9">
+                        </circle>
+
+                        <path d="M3 12h18"></path>
+
+                        <path
+                            d="M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9">
+                        </path>
+
+                        <path
+                            d="M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5 4 9">
+                        </path>
+
+                    </svg>
+
+                </summary>
+
+
+                <div class="dcbo-language-dropdown">
+
+                    <div class="dcbo-language-title">
+                        Select language
+                    </div>
+
+
+                    <!-- German -->
+                    <a
+                        class="dcbo-language-option"
+                        href="/">
+
+                        <span>Deutsch</span>
+
+                    </a>
+
+
+                    <!-- English -->
+                    <a
+                        class="dcbo-language-option dcbo-language-active"
+                        href="/en/">
+
+                        <span>English</span>
+
+                        <span class="dcbo-language-check">
+                            ✓
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </details>
+
+
+            <!-- Contact -->
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="#Kontakt">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
 
     </div>
-</nav>
 
+</nav>
+    
     <!-- Hero Section with Background Image -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -765,7 +854,7 @@
                         <h3>Robotics | Physical AI</h3>
 
                         <p>
-                            Technology · Innovation · Human Future
+                            Technology · Innovation · Future
                         </p>
                     </div>
 
@@ -780,7 +869,7 @@
                         <h3>People | Society</h3>
 
                         <p>
-                            Culture · Perspectives · Communication
+                            Culture · Diversity · Communication
                         </p>
                     </div>
 
