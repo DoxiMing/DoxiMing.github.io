@@ -83,62 +83,362 @@ a {
 
 .navbar {
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(48, 0, 75, 0.08);
+
+    box-shadow:
+        0 2px 10px rgba(48, 0, 75, 0.08);
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
 }
 
+
 .navbar .container {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     padding: 1rem 20px;
 }
 
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
 .nav-brand {
     display: flex;
+
     align-items: center;
 }
 
 
-/* Navigation logo */
 .dcbo-nav-logo {
     display: block;
 
     width: 50px;
+
     max-width: 100%;
 
     height: auto;
 }
 
+
+/* ==========================================
+   RIGHT SIDE
+   Language + Contact
+   ========================================== */
+
+.dcbo-nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.4rem;
+}
+
+
+/* ==========================================
+   CONTACT
+   ========================================== */
+
 .nav-menu {
     display: flex;
+
+    align-items: center;
+
     list-style: none;
+
     gap: 2rem;
+
+    margin: 0;
+
+    padding: 0;
 }
+
 
 .nav-menu a {
     color: var(--text-dark);
+
     font-weight: 500;
+
+    text-decoration: none;
+
     transition: var(--transition);
 }
 
+
 .nav-menu a:hover {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+
+    border-bottom:
+        2px solid var(--primary-color);
+
     padding-bottom: 0.25rem;
 }
 
+
 /* ==========================================
-   Mobile adjust
+   LANGUAGE MENU
    ========================================== */
 
-/* Mobile logo adjustment */
+.dcbo-language-menu {
+    position: relative;
+}
+
+
+/* ==========================================
+   GLOBE BUTTON
+   ========================================== */
+
+.dcbo-language-button {
+    list-style: none;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #30004b;
+
+    background-color: transparent;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* Remove browser's default details arrow */
+.dcbo-language-button::-webkit-details-marker {
+    display: none;
+}
+
+
+.dcbo-language-button::marker {
+    content: '';
+}
+
+
+.dcbo-language-button:hover {
+    background-color: #f7f2fa;
+}
+
+
+/* ==========================================
+   GLOBE ICON
+   Strong sizing prevents huge SVG
+   ========================================== */
+
+.dcbo-language-button .dcbo-language-icon {
+    display: block !important;
+
+    width: 23px !important;
+    height: 23px !important;
+
+    max-width: 23px !important;
+    max-height: 23px !important;
+
+    min-width: 23px;
+    min-height: 23px;
+
+    fill: none !important;
+
+    stroke: currentColor !important;
+
+    stroke-width: 1.6 !important;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   LANGUAGE DROPDOWN
+   ========================================== */
+
+.dcbo-language-dropdown {
+    position: absolute;
+
+    top: calc(100% + 14px);
+    right: 0;
+
+    width: 230px;
+
+    padding: 1rem;
+
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+
+    border:
+        1px solid rgba(48, 0, 75, 0.10);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 14px 35px rgba(48, 0, 75, 0.16);
+
+    z-index: 1200;
+}
+
+
+/* Small triangle above dropdown */
+.dcbo-language-dropdown::before {
+    content: '';
+
+    position: absolute;
+
+    top: -7px;
+    right: 13px;
+
+    width: 14px;
+    height: 14px;
+
+    background-color: #ffffff;
+
+    border-left:
+        1px solid rgba(48, 0, 75, 0.10);
+
+    border-top:
+        1px solid rgba(48, 0, 75, 0.10);
+
+    transform: rotate(45deg);
+}
+
+
+/* ==========================================
+   DROPDOWN TITLE
+   ========================================== */
+
+.dcbo-language-title {
+    margin-bottom: 0.7rem;
+
+    color: var(--text-light);
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================
+   LANGUAGE OPTIONS
+   ========================================== */
+
+.dcbo-language-option {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 0.75rem 0.8rem;
+
+    box-sizing: border-box;
+
+    color: var(--text-dark);
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dcbo-language-option:hover {
+    background-color: #f7f2fa;
+
+    color: #30004b;
+}
+
+
+/* Current language */
+.dcbo-language-active {
+    background-color: #f7f2fa;
+
+    color: #30004b;
+
+    font-weight: 700;
+}
+
+
+.dcbo-language-check {
+    color: #30004b;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
 @media (max-width: 600px) {
 
     .dcbo-nav-logo {
         width: 50px;
+    }
+
+
+    .dcbo-nav-actions {
+        gap: 0.75rem;
+    }
+
+
+    .dcbo-language-button {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .dcbo-language-button .dcbo-language-icon {
+        width: 21px !important;
+        height: 21px !important;
+
+        max-width: 21px !important;
+        max-height: 21px !important;
+
+        min-width: 21px;
+        min-height: 21px;
+    }
+
+
+    .dcbo-language-dropdown {
+        width: 210px;
+
+        right: -10px;
+    }
+
+
+    .nav-menu {
+        gap: 1rem;
     }
 
 }
