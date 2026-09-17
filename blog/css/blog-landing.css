@@ -274,6 +274,20 @@
 /* ==========================================
    BLOG POST FOOTER
    ========================================== */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-container {
+    flex: 1 0 auto;
+}
+
+.dcbo-footer {
+    margin-top: auto;
+    flex-shrink: 0;
+}
 
 .blog-post-footer {
     margin-top: 3rem;
