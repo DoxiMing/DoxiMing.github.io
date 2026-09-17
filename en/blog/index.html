@@ -6,7 +6,7 @@
     <title>Blog - Xing Qin</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../css/blog-main.css">
+    <link rel="stylesheet" href="../../blog/css/blog-main.css">
 </head>
 <body>
     <div id="Home"></div>
@@ -23,7 +23,7 @@
                             <circle cx="12" cy="12" r="9"></circle>
                             <path d="M3 12h18"></path>
                             <path d="M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9"></path>
-                            <path d="M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5 4 9"></path>
+                            <path d="M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5-4 9"></path>
                         </svg>
                     </summary>
                     <div class="dcbo-language-dropdown">
@@ -88,9 +88,6 @@
     <script>
         const blogSearch = document.getElementById('blogSearch');
         const filterButtons = document.querySelectorAll('.blog-filter-button');
-        const emptyState = document.getElementById('emptyState');
-
-        // English articles can be added to blogGrid later using the same blog-card markup as blog/index.html.
         let currentFilter = 'all';
         filterButtons.forEach(button => button.addEventListener('click', () => {
             filterButtons.forEach(item => item.classList.remove('active'));
