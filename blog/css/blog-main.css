@@ -1,10 +1,34 @@
 /* ==========================================
+   BLOG PAGE LAYOUT
+   Keep the footer at the bottom when content is short.
+   ========================================== */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-listing-section {
+    flex: 1 0 auto;
+}
+
+.dcbo-footer {
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+/* ==========================================
    BLOG MAIN/LISTING PAGE - STYLES
    Color: #30004b (Deep Purple)
    Fonts: Playfair Display + Lora
    ========================================== */
 
-/* Root Variables - Match Main Site */
 :root {
     --primary-color: #30004b;
     --primary-light: #4a0a65;
@@ -16,10 +40,6 @@
     --white: #ffffff;
     --transition: all 0.3s ease;
 }
-
-/* ==========================================
-   BLOG LISTING CONTAINER
-   ========================================== */
 
 .blog-listing-container {
     max-width: 1200px;
@@ -47,10 +67,6 @@
     max-width: 600px;
     margin: 0 auto;
 }
-
-/* ==========================================
-   SEARCH & FILTER SECTION
-   ========================================== */
 
 .blog-filters-section {
     display: flex;
@@ -109,21 +125,12 @@
     transition: var(--transition);
 }
 
-.blog-filter-button:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-}
-
+.blog-filter-button:hover,
 .blog-filter-button.active {
     background-color: var(--primary-color);
     color: var(--white);
     border-color: var(--primary-color);
 }
-
-/* ==========================================
-   BLOG GRID LAYOUT
-   ========================================== */
 
 .blog-grid {
     display: grid;
@@ -131,10 +138,6 @@
     gap: 2rem;
     margin-bottom: 3rem;
 }
-
-/* ==========================================
-   BLOG CARD
-   ========================================== */
 
 .blog-card {
     background-color: var(--white);
@@ -232,10 +235,6 @@
     transform: translateX(3px);
 }
 
-/* ==========================================
-   EMPTY STATE
-   ========================================== */
-
 .blog-empty-state {
     text-align: center;
     padding: 4rem 2rem;
@@ -253,48 +252,6 @@
     font-size: 1.1rem;
     color: var(--text-light);
 }
-
-/* ==========================================
-   PAGINATION (if needed)
-   ========================================== */
-
-.blog-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 3rem;
-}
-
-.blog-pagination-button {
-    padding: 0.75rem 1rem;
-    font-family: 'Lora', serif;
-    font-size: 1rem;
-    color: var(--primary-color);
-    background-color: var(--white);
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.blog-pagination-button:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.blog-pagination-button.active {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.blog-pagination-button.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/* ==========================================
-   MOBILE RESPONSIVE
-   ========================================== */
 
 @media (max-width: 768px) {
     .blog-listing-container {
@@ -316,10 +273,6 @@
 
     .blog-search-box {
         min-width: 100%;
-    }
-
-    .blog-filters-group {
-        gap: 0.5rem;
     }
 
     .blog-grid {
