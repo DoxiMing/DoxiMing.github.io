@@ -23,6 +23,10 @@ body {
     flex-shrink: 0;
 }
 
+.dcbo-footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 /* ==========================================
    BLOG MAIN/LISTING PAGE - STYLES
    Color: #30004b (Deep Purple)
