@@ -693,6 +693,52 @@ a {
     margin: 0;
 }
 
+.highlight p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* ===== Mein Ansatz Section ===== */
+.approach {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 5rem 20px;
+}
+.approach .container {
+    max-width: 700px;
+}
+.approach-kicker {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #d9a9f0;
+    margin-bottom: 1.5rem;
+}
+.approach p {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 1.3rem;
+}
+.approach p:last-child {
+    margin-bottom: 0;
+}
+.approach-accent {
+    color: #d9a9f0;
+    font-weight: 600;
+}
+.approach-muted {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
 /* ==========================================
    MY JOURNEY SECTION
    ========================================== */
