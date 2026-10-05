@@ -106,7 +106,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Xing Qin</h1>
+                    <h1 class="hero-title" id="heroTitle">Xing Qin</h1>
                     <p class="hero-subtitle">Marketing ist für mich kein Spiel, sondern eine Strategie. 
                         Es ist auch kein reines Berufsfeld, sondern eine Leidenschaft! </p>
                 </div>
@@ -1066,6 +1066,47 @@
         }
     </script>
 
+    
+    <!-- Animierter Hero-Name -->
+    <script>
+        (function () {
+            const titleEl = document.getElementById('heroTitle');
+            if (!titleEl) return;
+            if (window.innerWidth < 700) return;
+
+            const text = titleEl.textContent;
+            titleEl.textContent = '';
+
+            function rand(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const mid = text.length / 2;
+
+            [...text].forEach((char, i) => {
+                const span = document.createElement('span');
+                span.className = 'letter' + (char === ' ' ? ' space' : '');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+
+                const biasSign = i < mid ? 1 : -1;
+                const flip = Math.random() < 0.15 ? -1 : 1;
+
+                const dx = rand(45, 115) * biasSign * flip;
+                const dy = rand(18, 36) * (Math.random() < 0.5 ? -1 : 1);
+                const rot = rand(6, 16) * (Math.random() < 0.5 ? -1 : 1);
+
+                span.style.setProperty('--dx', dx.toFixed(1));
+                span.style.setProperty('--dy', dy.toFixed(1));
+                span.style.setProperty('--rot', rot.toFixed(1));
+                span.style.animationDuration = '5s, 5s';
+                span.style.animationDelay = '0s, 0s';
+                span.style.zIndex = Math.floor(rand(1, 10));
+
+                titleEl.appendChild(span);
+            });
+        })();
+    </script>
+    
     <!-- ==========================================
      Tracking with goatcounter
      ========================================== -->
