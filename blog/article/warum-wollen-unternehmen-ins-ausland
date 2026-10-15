@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutschland und China: Warum Unternehmen im jeweils anderen Land wachsen wollen - Blog</title>
+    <meta name="description" content="Ich bin in China aufgewachsen und arbeite heute in Deutschland. Ein Vergleich mit Zahlen: Warum deutsche Unternehmen nach China gehen – und warum chinesische Unternehmen nach Deutschland kommen.">
+    <link rel="canonical" href="https://doximing.github.io/blog/deutschland-china-zwei-laender-ein-spiegel/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Deutschland und China: Warum Unternehmen im jeweils anderen Land wachsen wollen">
+    <meta property="og:description" content="Ein Vergleich mit Zahlen: Warum deutsche Unternehmen nach China gehen – und warum chinesische Unternehmen nach Deutschland kommen.">
+    <meta property="og:url" content="https://doximing.github.io/blog/deutschland-china-zwei-laender-ein-spiegel/">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/blog-landing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img class="dcbo-nav-logo" src="../../avatar.jpg" width="50" height="50" alt="Xing Qin">
+                </a>
+            </div>
+            <div class="dcbo-nav-actions">
+                <details class="dcbo-language-menu">
+                    <summary class="dcbo-language-button" aria-label="Sprache auswählen">
+                        <svg class="dcbo-language-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M3 12h18"></path>
+                            <path d="M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9"></path>
+                            <path d="M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5 4 9"></path>
+                        </svg>
+                    </summary>
+                    <div class="dcbo-language-dropdown">
+                        <div class="dcbo-language-title">Sprache auswählen</div>
+                        <a class="dcbo-language-option dcbo-language-active" href="/blog/deutschland-china-zwei-laender-ein-spiegel/">
+                            <span>Deutsch</span>
+                            <span class="dcbo-language-check">✓</span>
+                        </a>
+                        <a class="dcbo-language-option" href="/en/blog/deutschland-china-zwei-laender-ein-spiegel/">
+                            <span>English</span>
+                        </a>
+                    </div>
+                </details>
+
+                <ul class="nav-menu">
+                    <li><a href="/#Kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="blog-header-image blog-header-image-placeholder" role="img" aria-label="Deutschland und China im wirtschaftlichen Vergleich"></div>
+
+    <!-- Blog Post Content -->
+    <div class="blog-post-container">
+        <!-- Header -->
+        <header class="blog-post-header">
+            <h1 class="blog-post-title">Deutschland und China: Warum Unternehmen im jeweils anderen Land wachsen wollen</h1>
+
+            <div class="blog-post-meta">
+                <span class="blog-post-author">Xing Qin</span>
+                <span class="blog-post-reading-time">6 min Lesezeit</span>
+            </div>
+
+            <div class="blog-post-topics">
+                <span class="blog-post-topic-tag">wirtschaft</span>
+                <span class="blog-post-topic-tag">china</span>
+                <span class="blog-post-topic-tag">cross-culture-management</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <article class="blog-post-content">
+            <p>
+                Ich bin in China aufgewachsen und arbeite heute in Deutschland. Ich habe gesehen, wie deutsche Firmen ihre Werke in China aufbauten
+                und wie mittlerweile chinesische Firmen versuchen, in Deutschland Fuß zu fassen. Ich frage mich: Warum gehen Unternehmen eigentlich
+                ins Ausland? Vielleicht denkt man gleich: Die Globalisierung hat diesen Prozess automatisch gefördert. Aber warum genau dorthin,
+                in ein Land mit komplett anderer Sprache und Kultur?
+            </p>
+
+            <h2>01 | Warum deutsche Unternehmen nach China gehen</h2>
+
+            <p>
+                <strong>Wie viel?</strong> Ende 2024 hielten Unternehmen mit deutscher Konzernspitze in China 110,3 Mrd. €
+                (Bundesbank<sup><a href="#q1">1</a></sup>), rund 6,5 % aller deutschen Auslandsinvestitionen. In 2.564 Gesellschaften arbeiten
+                793.000 Menschen, sie erwirtschafteten 390,7 Mrd. € Umsatz. Den Höchststand gab es 2022 mit 124,2 Mrd. €, seither ist der Bestand
+                gesunken. Im ersten Halbjahr 2026 kamen rund 5,6 Mrd. € neu hinzu (IW<sup><a href="#q2">2</a></sup>), doch die Bundesbank revidiert
+                diese Werte häufig und sie lassen sich nicht auf das Jahr hochrechnen.
+            </p>
+
+            <p>
+                <strong>Wohin?</strong> Die letzte detaillierte Aufschlüsselung des Bestands (Stand 2020, Bertelsmann/IW/MERICS<sup><a href="#q3">3</a></sup>,
+                Bundesbank-Daten):
+            </p>
+            <ul>
+                <li>Automobilindustrie: rund <strong>30 %</strong></li>
+                <li>Finanz- und Versicherungsdienstleistungen: <strong>12,4 %</strong></li>
+                <li>Chemie: <strong>9,2 %</strong></li>
+                <li>Maschinenbau: <strong>7,8 %</strong></li>
+                <li>Elektroindustrie: <strong>6 %</strong></li>
+            </ul>
+            <p>
+                Das verarbeitende Gewerbe macht zusammen knapp 69 % aus. China ist für deutsche Unternehmen also vor allem ein
+                <strong>Produktionsstandort</strong>. In der Autoindustrie steckt knapp 27 % aller deutschen Auslandsinvestitionen der Branche in China.
+            </p>
+
+            <p>
+                <strong>Warum?</strong> Die Antwort war damals sehr einfach: Produktion in China war billiger und der Markt war aufgrund der
+                Menschenanzahl attraktiv. Wer dort etwas verkaufen wollte, für den wäre eine Produktion in Deutschland mit anschließendem Export
+                nach China irrational gewesen. Hinzu kommt: Peking macht den Marktzugang teilweise von lokaler Produktion abhängig (Buy-China-Politik).
+            </p>
+
+            <p>
+                <strong>Ergebnis?</strong> 2025 flossen netto 3,5 Mrd. € nach China: 7,8 Mrd. € reinvestierte Gewinne, minus 1,6 Mrd. €
+                Beteiligungskapital (mehr Beteiligungen aufgelöst als neu erworben) und minus 2,7 Mrd. € Konzernkredite, die Mutterfirmen
+                zurückholen (Bundesbank<sup><a href="#q1">1</a></sup>, IW<sup><a href="#q2">2</a></sup>). Deutsche Firmen wachsen in China also
+                aus China heraus. Zwischen 2017 und 2021 erwirtschafteten sie dort jährlich 11 bis 15 Mrd. € Gewinn, davon flossen 53 % bis 80 %
+                nach Deutschland zurück (Bertelsmann/IW/MERICS<sup><a href="#q3">3</a></sup>). Zugleich gibt es Rückzug: Zwischen 2017 und 2024
+                kamen jährlich 2 Mrd. € neue Beteiligungen hinzu, während Beteiligungen für 3,6 Mrd. € aufgelöst wurden (IW<sup><a href="#q2">2</a></sup>).
+                Das IW warnt, dass dadurch Produktion und Arbeitsplätze aus Deutschland abwandern können.
+            </p>
+
+            <h2>02 | Warum chinesische Unternehmen nach Deutschland kommen</h2>
+
+            <p>
+                <strong>Wie viel?</strong> Deutlich weniger. Ende 2024 hielten Unternehmen mit chinesischer Konzernspitze 11,9 Mrd. € in
+                Deutschland (Bundesbank<sup><a href="#q1">1</a></sup>), das sind 1,3 % aller ausländischen Direktinvestitionen. In 370
+                Gesellschaften arbeiten 55.000 Menschen, sie erzielen 32,3 Mrd. € Umsatz. 2025 flossen nur rund 0,2 Mrd. € neu. Das chinesische
+                Handelsministerium nennt für Ende 2024 rund 18 Mrd. US-Dollar (MOFCOM<sup><a href="#q4">4</a></sup>). (Die Statistiken aus
+                verschiedenen Quellen sind unterschiedlich.)
+            </p>
+
+            <p>
+                <strong>Wohin?</strong> Nach der GTAI<sup><a href="#q5">5</a></sup> sind rund 77 % der erfassten chinesischen Firmen in
+                Deutschland Industriebetriebe, vor allem Maschinenbau und Autozulieferer. Das chinesische Handelsministerium nennt zusätzlich
+                Transport, Neue Energie, Telekommunikation und Handel (MOFCOM<sup><a href="#q4">4</a></sup>). Bei neuen Projekten liegen laut
+                Xinhua/GTAI<sup><a href="#q6">6</a></sup> Elektronik und Automatisierung, Verkehr und Logistik, Energie und Rohstoffe sowie
+                Digitalisierung vorn; 2025 zählte die GTAI 228 chinesische Projekte (ohne Übernahmen), erstmals seit 2017 mehr als aus den USA.
+                Dazu kommt <strong>E-Commerce</strong>: Temu, Shein und AliExpress hatten im zweiten Quartal 2026 einen Anteil von 5,3 % am
+                deutschen Onlinehandel, ein Rekord (Handelsblatt<sup><a href="#q7">7</a></sup>). Im Online-Modehandel entfallen mehr als 16 %
+                der Bestellungen (Wirtschaftsticker<sup><a href="#q8">8</a></sup>) auf sie.
+            </p>
+
+            <p>
+                <strong>Warum?</strong> In der Befragung chinesischer Unternehmen in Deutschland (CHKD/KPMG 2025<sup><a href="#q9">9</a></sup>,
+                104 Firmen) nennen 55 % die Nähe zu Kunden und Partnern, 51 % die Europazentrale, 44 % die Reputation und Sichtbarkeit der Marke,
+                42 % die Vertriebsdrehscheibe, 40 % Marktbeobachtung und 27 % Forschung und Entwicklung.
+            </p>
+
+            <p>Meine Beobachtung: Es gibt 2 Gruppen von chinesischen Unternehmen.</p>
+            <ol>
+                <li>
+                    <strong>Für manche geht es hier erstmal gar nicht um Profite, sondern um Aufbau ihrer Markenbekanntheit.</strong>
+                    Deutschland ist Eingangsmarkt und Testmarkt im Europa für sie, viele Firmen kommen oft ohne feste Strategie und
+                    Lokalisierungsplan, sie haben kein physisches Büro und sogar keine Mitarbeitende vor Ort.
+                </li>
+                <li>
+                    <strong>Die anderen Firmen investieren, gehen zunehmend tiefer.</strong> Über ein Fünftel der 228 chinesischen Projekte
+                    2025 betraf Produktion und Forschung (Xinhua/GTAI<sup><a href="#q6">6</a></sup>). Die bauen Fabriken, stellen deutsche
+                    Mitarbeiter an und erweitern ihre Standorte. Warum nicht mehr Firmen ihr Kerngeschäft hierher verlegen, könnte an den
+                    Hürden liegen: Arbeitskosten und Arbeitsrecht, Regulierung und ungleicher Zugang zu Fördermitteln (CHKD/KPMG<sup><a href="#q9">9</a></sup>).
+                </li>
+            </ol>
+
+            <p>
+                <strong>Ergebnis?</strong> 43 % der Firmen erwarten steigende Umsätze, 30 % wollen mehr investieren, 60 % halten das Niveau,
+                10 % planen Desinvestitionen (CHKD/KPMG<sup><a href="#q9">9</a></sup>). Konkrete Gewinnzahlen einzelner chinesischer
+                Großunternehmen oder E-Commerce-Plattformen in Deutschland werden nicht veröffentlicht. Messbar ist aber ihr wirtschaftlicher
+                Effekt: Kaufen Menschen bei Temu und SHEIN statt bei deutschen Händlern, gehen der deutschen Wirtschaft laut einer IW-Studie
+                jährlich rund 2,4 Mrd. € an Umsatz und Wertschöpfung verloren. Geld, das sonst bei deutschen Unternehmen geblieben wäre (davon
+                1,3 Mrd. € allein im Einzelhandel). Dazu kommen rund 429 Mio. € entgangene Steuereinnahmen und über 40.000 wegfallende
+                Arbeitsplätze (HDE/IW<sup><a href="#q11">11</a></sup>).
+            </p>
+
+            <h2>03 | Der Vergleich</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>DE → CN</th>
+                        <th>CN → DE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Kernmotiv</strong></td>
+                        <td>Lokalisierung: Kosten, Wettbewerbsfähigkeit, Marktzugang</td>
+                        <td>Markenbekanntheit, Reputation, Einstieg in Europa, Testmarkt</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Präsenz</strong></td>
+                        <td>Werke, viele Beschäftigte, tiefe Verwurzelung</td>
+                        <td>oft leichter Fußabdruck, zunehmend auch Produktion und F&amp;E</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Schwerpunkte</strong></td>
+                        <td>Auto, Chemie, Maschinenbau</td>
+                        <td>Maschinenbau, Autozulieferer, E-Mobilität, Elektronik und Automatisierung, E-Commerce</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Größte Hürden</strong></td>
+                        <td>Preisdruck, abnehmende Nachfrage, „Buy China"</td>
+                        <td>Arbeitskosten und Arbeitsrecht, Regulierung, Zugang zu Fördermitteln</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="blog-table-caption">
+                Quellen: AHK Greater China<sup><a href="#q10">10</a></sup>, CHKD/KPMG<sup><a href="#q9">9</a></sup> und weitere Quellen wie oben.
+            </p>
+
+            <p>
+                Auf einen chinesischen Euro in Deutschland kommen rund elf deutsche Euro in China (Bestand Ende 2024, Bundesbank, eigene Rechnung).
+                Beide treffen sich in denselben Branchen, Auto und Maschinenbau, aber aus verschiedenen Gründen.
+            </p>
+
+            <h2>04 | Mein Fazit</h2>
+            <ol>
+                <li>
+                    Deutsche Unternehmen gehen nach China, weil sie müssen. Wer im chinesischen Markt bleiben will, muss vor Ort produzieren.
+                    Die „Buy China"-Politik ist ein gutes Beispiel für diesen Zwang.
+                </li>
+                <li>
+                    Chinesische Unternehmen kommen nach Deutschland, weil sie wollen. Hinsichtlich der geopolitischen Positionierung und des
+                    zunehmenden Wettbewerbsdrucks im Inland wollen sie ihre Markenbekanntheit im europäischen Markt aufbauen. Deutschland liegt
+                    zentral und eignet sich als Hauptmarkt.
+                </li>
+                <li>
+                    <strong>Was bedeutet das für uns?</strong> Als Privatpersonen oft gar nichts, wenn man sich nicht dafür interessiert. Man
+                    fragt sich nur, wo man noch günstigere Produkte bekommt. Viele wissen nichts von dem, was hinter den Kulissen passiert.
+                    Aber als Unternehmer? Als Marketer? Als Direktorin oder Mitarbeiter im chinesisch-deutschen Umfeld? Das lohnt sich zu
+                    hinterfragen und zu verstehen, warum Chinesen und Deutsche so handeln, wie sie handeln.
+                </li>
+            </ol>
+
+            <div class="blog-post-footnotes">
+                <h3>Quellenverzeichnis</h3>
+                <ol>
+                    <li id="q1"><a href="https://www.bundesbank.de/de/statistiken/aussenwirtschaft/direktinvestitionen/direktinvestitionsstatistiken-804078" target="_blank" rel="noopener">Deutsche Bundesbank: Direktinvestitionsstatistiken (Stand 30.04.2026)</a></li>
+                    <li id="q2"><a href="https://www.iwkoeln.de/presse/iw-nachrichten/juergen-matthes-deutsche-firmen-investieren-milliarden-in-china.html" target="_blank" rel="noopener">IW-Nachricht: Deutsche Firmen investieren Milliarden in China (14.09.2026)</a></li>
+                    <li id="q3"><a href="https://www.bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/FDI-Studie_Gewinne_deutscher_Investoren_in_China.pdf" target="_blank" rel="noopener">Bertelsmann Stiftung/IW/MERICS/BDI: Gewinne deutscher Investoren in China</a></li>
+                    <li id="q4"><a href="https://www.mofcom.gov.cn/dl/gbdqzn/upload/deguo.pdf" target="_blank" rel="noopener">Handelsministerium der VR China (MOFCOM): Leitfaden Deutschland 2025</a></li>
+                    <li id="q5"><a href="https://www.gtai.de/de/trade/china/wirtschaftsumfeld/auslandsinvestitionen-1976390" target="_blank" rel="noopener">GTAI: Chinas Firmen investieren global</a></li>
+                    <li id="q6"><a href="https://www.news.cn/20260521/117070f4c6b04fe6b43bba4b67d1fbcd/c.html" target="_blank" rel="noopener">Xinhua: Bericht zum GTAI-Investitionsbericht 2025 (21.05.2026)</a></li>
+                    <li id="q7"><a href="https://www.handelsblatt.com/politik/deutschland/onlineshopping-temu-shein-und-co-steigern-marktanteil-auf-rekordwert/100238187.html" target="_blank" rel="noopener">Handelsblatt: Temu, Shein und Co. steigern Marktanteil auf Rekordwert</a></li>
+                    <li id="q8"><a href="https://wirtschaftsticker.com/2026/07/temu-shein-und-co-steigern-marktanteil-auf-rekordwert/" target="_blank" rel="noopener">Wirtschaftsticker: Temu, Shein und Co. Marktanteil auf Rekordwert</a></li>
+                    <li id="q9"><a href="https://kpmg.com/de/de/medien/pressemitteilungen/2025/11/deutschland-bleibt-top-investitionsstandort-fuer-chinesische-unternehmen.html" target="_blank" rel="noopener">CHKD/KPMG: German Chinese Business Confidence Survey 2025</a></li>
+                    <li id="q10"><a href="https://china.ahk.de/en/news/business-confidence-survey-2025-26" target="_blank" rel="noopener">AHK Greater China: Business Confidence Survey 2025/26</a></li>
+                    <li id="q11"><a href="https://einzelhandel.de/presse/aktuellemeldungen/15153-aktuelle-studie-unfairer-wettbewerb-mit-temu-und-shein-kostet-deutsche-wirtschaft-2-4-milliarden-euro-im-jahr" target="_blank" rel="noopener">HDE/IW: Unfairer Wettbewerb mit Temu und Shein kostet deutsche Wirtschaft 2,4 Milliarden Euro im Jahr (23.04.2026)</a></li>
+                </ol>
+            </div>
+        </article>
+
+        <!-- Author Bio -->
+        <div class="blog-post-footer">
+            <div class="blog-post-author-bio">
+                <img src="../../avatar.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Xing Qin" class="blog-post-author-avatar">
+                <div class="blog-post-author-info">
+                    <h3>Über die Autorin</h3>
+                    <p>
+                        Xing Qin ist B2B Marketing Strategin mit Hintergrund in Soziologie. Sie verbindet psychologisches Verständnis
+                        mit Marketing-Strategie und glaubt, dass authentisches Marketing die Zukunft ist.
+                    </p>
+                    <a href="/#Kontakt">Kontakt aufnehmen →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation to other posts -->
+        <nav class="blog-post-navigation">
+            <a href="#" class="blog-post-nav-item prev" style="opacity: 0.5; cursor: not-allowed;">
+                <span class="blog-post-nav-label">Vorheriger Beitrag</span>
+                <span class="blog-post-nav-title">Kommt bald...</span>
+            </a>
+            <a href="#" class="blog-post-nav-item next" style="opacity: 0.5; cursor: not-allowed;">
+                <span class="blog-post-nav-label">Nächster Beitrag</span>
+                <span class="blog-post-nav-title">Kommt bald...</span>
+            </a>
+        </nav>
+
+        <!-- Related Posts -->
+        <section class="blog-related-posts">
+            <h3>Weitere interessante Beiträge</h3>
+            <div class="blog-related-grid">
+                <a href="../beispiel-blog-post.html" class="blog-related-item">
+                    <div class="blog-related-item-thumbnail blog-related-item-thumbnail-placeholder" role="img" aria-label="Warum Menschen entscheiden"></div>
+                    <div class="blog-related-item-content">
+                        <h4 class="blog-related-item-title">Warum Menschen entscheiden, wie sie entscheiden</h4>
+                    </div>
+                </a>
+                <span class="blog-related-item blog-related-item-disabled" aria-disabled="true">
+                    <div class="blog-related-item-thumbnail blog-related-item-thumbnail-placeholder" role="img" aria-label="Kultur und Marketing"></div>
+                    <div class="blog-related-item-content">
+                        <h4 class="blog-related-item-title">Cross-Culture Marketing</h4>
+                        <p class="blog-related-item-date">Kommt bald...</p>
+                    </div>
+                </span>
+                <span class="blog-related-item blog-related-item-disabled" aria-disabled="true">
+                    <div class="blog-related-item-thumbnail blog-related-item-thumbnail-placeholder" role="img" aria-label="Marketing Strategie"></div>
+                    <div class="blog-related-item-content">
+                        <h4 class="blog-related-item-title">Echte Marketing Strategie</h4>
+                        <p class="blog-related-item-date">Kommt bald...</p>
+                    </div>
+                </span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="dcbo-footer">
+        <div class="dcbo-footer-container">
+            <div class="dcbo-footer-top">
+                <nav class="dcbo-footer-nav" aria-label="Footer Navigation">
+                    <a href="/">Home</a>
+                    <span class="dcbo-footer-nav-divider">|</span>
+                    <a href="/blog/">Blog</a>
+                </nav>
+
+                <div id="Kontakt" class="dcbo-footer-social">
+                    <a class="dcbo-footer-icon" href="mailto:x.privat@d0m1.de" aria-label="E-Mail">✉</a>
+                    <a class="dcbo-footer-icon dcbo-footer-icon-text" href="https://www.linkedin.com/in/xing-qin/" aria-label="LinkedIn">in</a>
+                    <a class="dcbo-footer-icon" href="https://www.instagram.com/xing311" aria-label="Instagram">
+                        <svg class="dcbo-footer-instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1"></circle>
+                        </svg>
+                    </a>
+                    <a class="dcbo-footer-icon dcbo-footer-icon-xing" href="https://www.xing.com/profile/Xing_Qin7/" aria-label="XING">X</a>
+                </div>
+            </div>
+
+            <div class="dcbo-footer-bottom">
+                <p>&copy; 2026 Xing Qin. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
