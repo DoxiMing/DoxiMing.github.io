@@ -334,71 +334,6 @@ body {
 }
 
 /* ==========================================
-   RELATED POSTS
-   ========================================== */
-
-.blog-related-posts {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--bg-light);
-}
-
-.blog-related-posts h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.blog-related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.blog-related-item {
-    background-color: var(--white);
-    border: 1px solid #e0d5ed;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: var(--transition);
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.blog-related-item:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 8px 20px rgba(48, 0, 75, 0.1);
-    transform: translateY(-3px);
-}
-
-.blog-related-item-thumbnail {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    background-color: var(--bg-light);
-    display: block;
-}
-
-.blog-related-item-content {
-    padding: 1rem;
-}
-
-.blog-related-item-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.blog-related-item-date {
-    font-family: 'Lora', serif;
-    font-size: 0.8rem;
-    color: var(--text-light);
-}
-
-/* ==========================================
    MOBILE RESPONSIVE
    ========================================== */
 
@@ -479,10 +414,6 @@ body {
 
     .blog-header-image {
         max-height: 250px;
-    }
-
-    .blog-related-grid {
-        grid-template-columns: 1fr;
     }
 }
 
